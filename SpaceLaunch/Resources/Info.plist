@@ -16,10 +16,14 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>AstronautListViewController</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+	<key>UIMainStoryboardFile</key>
+	<string>AstronautListViewController</string>
+	<key>astronautListBaseURL</key>
+	<string>$(ASTRONAUT_BASE_URL)</string>
 </dict>
 </plist>
