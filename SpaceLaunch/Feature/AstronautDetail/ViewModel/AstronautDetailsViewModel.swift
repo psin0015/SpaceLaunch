@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol AstronautListViewModel: AnyObject {
-    var astronauts: [Astronaut] { set get }
-    var onFetchAstronautsSucceed: (() -> Void)? { set get }
-    var onFetchAstronautsFailure: ((Error) -> Void)? { set get }
-    func fetchAstronauts()
+protocol AstronautDetailsViewModel: AnyObject {
+    var astronautDetail: AstronautDetails? { set get }
+    var onFetchAstronautDetailsSucceed: (() -> Void)? { set get }
+    var onFetchAstronautDetailsFailure: ((Error) -> Void)? { set get }
+    func fetchAstronautDetail(astronautId: Int)
 }
 
-final class AstronautListDefaultViewModel: AstronautListViewModel {
+final class AstronautDetailsDefaultViewModel: AstronautDetailsViewModel {
     
     private let networkService: NetworkService
     
@@ -22,19 +22,19 @@ final class AstronautListDefaultViewModel: AstronautListViewModel {
         self.networkService = networkService
     }
     
-    var astronauts: [Astronaut] = []
-    var onFetchAstronautsSucceed: (() -> Void)?
-    var onFetchAstronautsFailure: ((Error) -> Void)?
+    var astronautDetail: AstronautDetails?
+    var onFetchAstronautDetailsSucceed: (() -> Void)?
+    var onFetchAstronautDetailsFailure: ((Error) -> Void)?
     
-    func fetchAstronauts() {
-        let request = AstronautListRequest()
+    func fetchAstronautDetail(astronautId: Int) {
+        let request = AstronautDetailsRequest(astronautId: astronautId)
         networkService.request(request) { [weak self] result in
             switch result {
-            case .success(let astronauts):
-                self?.astronauts = astronauts
-                self?.onFetchAstronautsSucceed?()
+            case .success(let astronautDetail):
+                self?.astronautDetail = astronautDetail
+                self?.onFetchAstronautDetailsSucceed?()
             case .failure(let error):
-                self?.onFetchAstronautsFailure?(error)
+                self?.onFetchAstronautDetailsFailure?(error)
             }
         }
     }

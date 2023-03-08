@@ -17,11 +17,4 @@ public struct Astronaut: Codable {
     let name: String
     let nationality: String
     let profileImageThumbnail: String
-    
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case name
-//        case nationality
-//        case profileImageThumbnail = "profile_image_thumbnail"
-//    }
 }

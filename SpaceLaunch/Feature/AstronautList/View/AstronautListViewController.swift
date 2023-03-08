@@ -50,6 +50,10 @@ class AstronautListViewController: UIViewController {
                 self?.astronautListTableView.isUserInteractionEnabled = true
             }
         }
+        
+        viewModel.onFetchAstronautsFailure = { error in
+            print("\(error)")
+        }
     }
 }
 
@@ -78,5 +82,11 @@ extension AstronautListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let astronautDetailsViewStoryboard = UIStoryboard(name: "AstronautDetailsViewController", bundle: nil)
+        if let astronautDetailsViewController = astronautDetailsViewStoryboard.instantiateViewController(withIdentifier: "AstronautDetailsViewController") as? AstronautDetailsViewController {
+            astronautDetailsViewController.astronautId = viewModel.astronauts[indexPath.row].id
+            self.navigationController?.pushViewController(astronautDetailsViewController, animated: true)
+        }        
     }
 }

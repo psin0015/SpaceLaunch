@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DBD87AAD29B8B52B00AE1B39 /* AstronautViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AAC29B8B52B00AE1B39 /* AstronautViewModel.swift */; };
 		DBD87AAF29B8B67800AE1B39 /* ImageDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AAE29B8B67800AE1B39 /* ImageDownloadRequest.swift */; };
+		DBD87AB129B8C00400AE1B39 /* AstronautDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */; };
 		DBED890729B8850A00FA6584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890629B8850A00FA6584 /* AppDelegate.swift */; };
 		DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890829B8850A00FA6584 /* SceneDelegate.swift */; };
 		DBED891029B8850B00FA6584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBED890F29B8850B00FA6584 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		DBD87AAC29B8B52B00AE1B39 /* AstronautViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautViewModel.swift; sourceTree = "<group>"; };
 		DBD87AAE29B8B67800AE1B39 /* ImageDownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadRequest.swift; sourceTree = "<group>"; };
+		DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsRequest.swift; sourceTree = "<group>"; };
 		DBED890329B8850A00FA6584 /* SpaceLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED890629B8850A00FA6584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBED890829B8850A00FA6584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				DBED896429B8A04400FA6584 /* AstronautListRequest.swift */,
 				DBD87AAE29B8B67800AE1B39 /* ImageDownloadRequest.swift */,
+				DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				DBED894429B88AE600FA6584 /* AstronautListCell.swift in Sources */,
 				DBED895729B893D900FA6584 /* AstronautListViewModel.swift in Sources */,
 				DBED895A29B893F200FA6584 /* AstronautDetailsViewModel.swift in Sources */,
+				DBD87AB129B8C00400AE1B39 /* AstronautDetailsRequest.swift in Sources */,
 				DBED896029B89E7700FA6584 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,20 +7,11 @@
 
 import Foundation
 
-struct AstronautDetails: Decodable {
+struct AstronautDetails: Codable {
     let id: Int
     let name: String
     let nationality: String
     let dateOfBirth: String
     let profileImage: String
     let bio: String
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case nationality
-        case dateOfBirth = "date_of_birth"
-        case profileImage = "profile_image"
-        case bio
-    }
 }

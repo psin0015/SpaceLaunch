@@ -26,9 +26,6 @@ struct AstronautListRequest: DataRequest {
     func decode(_ data: Data) throws -> [Astronaut] {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-mm-dd"
-//        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         
         let response = try decoder.decode(AstronautResponse.self, from: data)
         return response.results
