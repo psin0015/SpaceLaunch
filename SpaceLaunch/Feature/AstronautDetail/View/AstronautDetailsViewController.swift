@@ -27,12 +27,14 @@ class AstronautDetailsViewController: UIViewController {
     }
     
     func setupView() {
-        navigationItem.title = "Astronaut Details"
+        navigationItem.title = StringConstants.astronautDetailsTitle
         
         //Setup the loading activity indicator
         activityView.hidesWhenStopped = true
-        activityView.frame = CGRect(x: view.frame.midX - 25, y: view.frame.midY - 25, width: 50, height: 50)
-        activityView.accessibilityIdentifier = "loadingSpinner"
+        activityView.frame = CGRect(x: view.frame.midX - Metrics.activityIndicatorWidth/2, y: view.frame.midY - Metrics.activityIndicatorHeight/2, width: Metrics.activityIndicatorWidth, height: Metrics.activityIndicatorHeight)
+        activityView.accessibilityLabel = AccessibilityLabels.loadingAstronautDetails
+        activityView.accessibilityIdentifier = AccessibilityLabels.loadingSpinnerIdentifier
+        activityView.isAccessibilityElement = true
         activityView.startAnimating()
         self.view.addSubview(activityView)
 
@@ -49,6 +51,21 @@ class AstronautDetailsViewController: UIViewController {
                 self?.setAstronautDetails()
             }
         }
+        
+        viewModel.onFetchAstronautDetailsFailure = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.showErrorAlert()
+            }
+        }
+    }
+    
+    func showErrorAlert() {
+        let alert = UIAlertController(title: StringConstants.errorMessageTitle, message: StringConstants.errorMessageAstronautDetails, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: StringConstants.errorMessageAction, style: UIAlertAction.Style.default, handler: { [weak self] _ in
+            self?.activityView.stopAnimating()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func setAstronautDetails() {
@@ -57,12 +74,12 @@ class AstronautDetailsViewController: UIViewController {
             astronautNationality.text = astronautDetail.nationality
             astronautDateOfBirth.text = astronautDetail.dateOfBirth
             astronautBio.text = astronautDetail.bio
-            astronautDetailImageView.accessibilityLabel = "An image of \(astronautDetail.name)"
+            astronautDetailImageView.isAccessibilityElement = true
+            astronautDetailImageView.accessibilityLabel = "\(AccessibilityLabels.astronautImage) \(astronautDetail.name)"
             ImageDownloadClient.shared.setImage(from: astronautDetail.profileImage, placeholderImage: nil) { [weak self] image in
                 self?.astronautDetailImageView.image = image
                 self?.activityView.stopAnimating()
             }
         }
     }
-    
 }

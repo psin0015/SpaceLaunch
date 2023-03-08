@@ -12,7 +12,7 @@ class AstronautListViewController: UIViewController {
     @IBOutlet weak var astronautListTableView: UITableView!
     let activityView = UIActivityIndicatorView(style: .large)
     private let viewModel: AstronautListViewModel = AstronautListDefaultViewModel(networkService: DefaultNetworkService())
-    
+    private var astronautListSorted = false
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -25,12 +25,18 @@ class AstronautListViewController: UIViewController {
         astronautListTableView.dataSource = self
         astronautListTableView.delegate = self
         astronautListTableView.register(UINib.init(nibName: "AstronautListCell", bundle: nil), forCellReuseIdentifier: AstronautListCell.reuseIdentifier)
-        navigationItem.title = "Astronaut List"
+        navigationItem.title = StringConstants.astronautListTitle
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action:  #selector(sortAstronautNames))
+        navigationItem.rightBarButtonItem?.accessibilityLabel = AccessibilityLabels.sortButton
+        navigationItem.rightBarButtonItem?.isEnabled = false
         
         //Setup the loading activity indicator
         activityView.hidesWhenStopped = true
-        activityView.frame = CGRect(x: view.frame.midX - 25, y: view.frame.midY - 25, width: 50, height: 50)
-        activityView.accessibilityIdentifier = "loadingSpinner"
+        activityView.frame = CGRect(x: view.frame.midX - Metrics.activityIndicatorWidth/2, y: view.frame.midY - Metrics.activityIndicatorHeight/2, width: Metrics.activityIndicatorWidth, height: Metrics.activityIndicatorHeight)
+        activityView.accessibilityLabel = AccessibilityLabels.loadingAstronautList
+        activityView.accessibilityIdentifier = AccessibilityLabels.loadingSpinnerIdentifier
+        activityView.isAccessibilityElement = true
         activityView.startAnimating()
         self.view.addSubview(activityView)
         
@@ -48,12 +54,35 @@ class AstronautListViewController: UIViewController {
                 self?.astronautListTableView.reloadData()
                 self?.activityView.stopAnimating()
                 self?.astronautListTableView.isUserInteractionEnabled = true
+                self?.navigationItem.rightBarButtonItem?.isEnabled = true
             }
         }
         
-        viewModel.onFetchAstronautsFailure = { error in
-            print("\(error)")
+        viewModel.onFetchAstronautsFailure = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.showErrorAlert()
+            }
         }
+    }
+    
+    func showErrorAlert() {
+        let alert = UIAlertController(title: StringConstants.errorMessageTitle, message: StringConstants.errorMessageAstronautList, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: StringConstants.errorMessageAction, style: UIAlertAction.Style.default, handler: { [weak self] _ in
+            self?.activityView.stopAnimating()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func sortAstronautNames() {
+        if (astronautListSorted) {
+            viewModel.astronauts.reverse()
+        } else {
+            viewModel.astronauts.sort { $0.name > $1.name }
+            astronautListSorted = true
+        }
+        astronautListTableView.reloadData()
     }
 }
 

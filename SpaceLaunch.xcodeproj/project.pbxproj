@@ -10,6 +10,9 @@
 		DBD87AAD29B8B52B00AE1B39 /* AstronautViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AAC29B8B52B00AE1B39 /* AstronautViewModel.swift */; };
 		DBD87AAF29B8B67800AE1B39 /* ImageDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AAE29B8B67800AE1B39 /* ImageDownloadRequest.swift */; };
 		DBD87AB129B8C00400AE1B39 /* AstronautDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */; };
+		DBD87AB329B8D98900AE1B39 /* AccessibilityLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */; };
+		DBD87AB529B8DA8F00AE1B39 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */; };
+		DBD87AB729B8E34900AE1B39 /* Meterics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB629B8E34900AE1B39 /* Meterics.swift */; };
 		DBED890729B8850A00FA6584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890629B8850A00FA6584 /* AppDelegate.swift */; };
 		DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890829B8850A00FA6584 /* SceneDelegate.swift */; };
 		DBED891029B8850B00FA6584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBED890F29B8850B00FA6584 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		DBD87AAC29B8B52B00AE1B39 /* AstronautViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautViewModel.swift; sourceTree = "<group>"; };
 		DBD87AAE29B8B67800AE1B39 /* ImageDownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadRequest.swift; sourceTree = "<group>"; };
 		DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsRequest.swift; sourceTree = "<group>"; };
+		DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabels.swift; sourceTree = "<group>"; };
+		DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		DBD87AB629B8E34900AE1B39 /* Meterics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meterics.swift; sourceTree = "<group>"; };
 		DBED890329B8850A00FA6584 /* SpaceLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED890629B8850A00FA6584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBED890829B8850A00FA6584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				DBED895429B892B900FA6584 /* Helpers.swift */,
+				DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */,
+				DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */,
+				DBD87AB629B8E34900AE1B39 /* Meterics.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -439,9 +448,12 @@
 				DBED895E29B89DC600FA6584 /* DataRequest.swift in Sources */,
 				DBED894D29B88B8B00FA6584 /* AstronautDetailsViewController.swift in Sources */,
 				DBED895529B892B900FA6584 /* Helpers.swift in Sources */,
+				DBD87AB529B8DA8F00AE1B39 /* StringConstants.swift in Sources */,
+				DBD87AB329B8D98900AE1B39 /* AccessibilityLabels.swift in Sources */,
 				DBED896229B89F2100FA6584 /* ImageDownloadClient.swift in Sources */,
 				DBD87AAF29B8B67800AE1B39 /* ImageDownloadRequest.swift in Sources */,
 				DBED895129B88D2100FA6584 /* Astronaut.swift in Sources */,
+				DBD87AB729B8E34900AE1B39 /* Meterics.swift in Sources */,
 				DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */,
 				DBED894F29B88D1B00FA6584 /* AstronautDetails.swift in Sources */,
 				DBED894429B88AE600FA6584 /* AstronautListCell.swift in Sources */,
