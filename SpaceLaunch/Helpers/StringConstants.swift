@@ -14,4 +14,5 @@ struct StringConstants {
     static let errorMessageAstronautDetails = "There seems to be a problem in fetching the astronaut details. Please try again after some time."
     static let errorMessageTitle = "Alert"
     static let errorMessageAction = "Ok"
+    static let astronautDetailsViewController = "AstronautDetailsViewController"
 }

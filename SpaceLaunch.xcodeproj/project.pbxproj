@@ -25,6 +25,7 @@
 		DBD87ACB29B9962700AE1B39 /* MockDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87ACA29B9962700AE1B39 /* MockDataGenerator.swift */; };
 		DBD87ACF29B9AA4700AE1B39 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC429B98ABA00AE1B39 /* AccessibilityIdentifier.swift */; };
 		DBD87AD229B9DF5D00AE1B39 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */; };
+		DBD87AD429B9F50D00AE1B39 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AD329B9F50C00AE1B39 /* UIViewController+Extension.swift */; };
 		DBED890729B8850A00FA6584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890629B8850A00FA6584 /* AppDelegate.swift */; };
 		DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890829B8850A00FA6584 /* SceneDelegate.swift */; };
 		DBED891029B8850B00FA6584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBED890F29B8850B00FA6584 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		DBD87AC829B9954F00AE1B39 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		DBD87ACA29B9962700AE1B39 /* MockDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataGenerator.swift; sourceTree = "<group>"; };
 		DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DBD87AD329B9F50C00AE1B39 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DBED890329B8850A00FA6584 /* SpaceLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED890629B8850A00FA6584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBED890829B8850A00FA6584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */,
+				DBD87AD329B9F50C00AE1B39 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD87AD429B9F50D00AE1B39 /* UIViewController+Extension.swift in Sources */,
 				DBD87AAD29B8B52B00AE1B39 /* AstronautViewModel.swift in Sources */,
 				DBED895C29B8979E00FA6584 /* NetworkService.swift in Sources */,
 				DBED894829B88B5200FA6584 /* AstronautListViewController.swift in Sources */,

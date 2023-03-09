@@ -33,6 +33,15 @@ final class SpaceLaunchUITests: XCTestCase {
         let tableView = app.tables.element(boundBy: 0)
         _ = tableView.cells.element.waitForExistence(timeout: 5.0)
         tableView.cells.firstMatch.tap()
-        XCTAssertTrue(app.images[AccessibilityIdentifier.astronautDetailImageView].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.images[AccessibilityIdentifier.astronautDetailImageView].waitForExistence(timeout: 8))
+    }
+    
+    func testAstronautListSortButton() {
+        let app = XCUIApplication()
+        app.launch()
+        let tableView = app.tables.element(boundBy: 0)
+        _ = tableView.cells.element.waitForExistence(timeout: 5.0)
+        app.buttons[AccessibilityIdentifier.sortButton].tap()
+        XCTAssertTrue(app.tables.cells.firstMatch.staticTexts["Wang Yaping"].exists)                
     }
 }

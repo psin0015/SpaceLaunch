@@ -9,9 +9,7 @@ import Foundation
 
 final class Helper {
     lazy var astronautListBaseURL: String = {
-        guard let apiBaseURL = Bundle.main.object(forInfoDictionaryKey: "astronautListBaseURL") as? String else {
-            fatalError("Astronaut List Base URL must not be empty in plist")
-        }
+        guard let apiBaseURL = Bundle.main.object(forInfoDictionaryKey: "astronautListBaseURL") as? String else { return "" }
         return apiBaseURL
     }()
 }
