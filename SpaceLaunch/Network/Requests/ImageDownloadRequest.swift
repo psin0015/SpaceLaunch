@@ -22,7 +22,7 @@ struct ImageDownloadRequest: DataRequest {
                 code: 13,
                 userInfo: nil
             )
-        }        
+        }
         return image
     }
 }

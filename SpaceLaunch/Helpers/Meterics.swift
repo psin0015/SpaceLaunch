@@ -8,6 +8,6 @@
 import Foundation
 
 final class Metrics {
-    static var activityIndicatorHeight: CGFloat = 50
-    static var activityIndicatorWidth: CGFloat = 50
+    static let activityIndicatorHeight: CGFloat = 50
+    static let activityIndicatorWidth: CGFloat = 50
 }

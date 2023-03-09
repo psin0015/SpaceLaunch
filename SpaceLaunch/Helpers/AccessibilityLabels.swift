@@ -8,10 +8,9 @@
 import Foundation
 
 final class AccessibilityLabels {    
-    static var sortButton = "Astronaut names sort"
-    static var loadingAstronautList = "Loading astronaut list"
-    static var loadingAstronautDetails = "Loading astronaut details"
-    static var astronautImage = "A photograph of"
-    static var loadingSpinnerIdentifier = "loadingSpinner"
+    static let sortButton = "Astronaut names sort"
+    static let loadingAstronautList = "Loading astronaut list"
+    static let loadingAstronautDetails = "Loading astronaut details"
+    static let astronautImage = "A photograph of"
 }
 

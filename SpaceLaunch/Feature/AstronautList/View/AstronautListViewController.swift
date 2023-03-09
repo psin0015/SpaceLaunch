@@ -28,6 +28,7 @@ class AstronautListViewController: UIViewController {
         navigationItem.title = StringConstants.astronautListTitle
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action:  #selector(sortAstronautNames))
+        navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.accessibilityLabel = AccessibilityLabels.sortButton
         navigationItem.rightBarButtonItem?.isEnabled = false
         
@@ -35,7 +36,7 @@ class AstronautListViewController: UIViewController {
         activityView.hidesWhenStopped = true
         activityView.frame = CGRect(x: view.frame.midX - Metrics.activityIndicatorWidth/2, y: view.frame.midY - Metrics.activityIndicatorHeight/2, width: Metrics.activityIndicatorWidth, height: Metrics.activityIndicatorHeight)
         activityView.accessibilityLabel = AccessibilityLabels.loadingAstronautList
-        activityView.accessibilityIdentifier = AccessibilityLabels.loadingSpinnerIdentifier
+        activityView.accessibilityIdentifier = AccessibilityIdentifier.loadingSpinnerIdentifier
         activityView.isAccessibilityElement = true
         activityView.startAnimating()
         self.view.addSubview(activityView)

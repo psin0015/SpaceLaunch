@@ -28,16 +28,15 @@ class AstronautDetailsViewController: UIViewController {
     
     func setupView() {
         navigationItem.title = StringConstants.astronautDetailsTitle
-        
+        navigationController?.navigationBar.tintColor = .white
         //Setup the loading activity indicator
         activityView.hidesWhenStopped = true
         activityView.frame = CGRect(x: view.frame.midX - Metrics.activityIndicatorWidth/2, y: view.frame.midY - Metrics.activityIndicatorHeight/2, width: Metrics.activityIndicatorWidth, height: Metrics.activityIndicatorHeight)
         activityView.accessibilityLabel = AccessibilityLabels.loadingAstronautDetails
-        activityView.accessibilityIdentifier = AccessibilityLabels.loadingSpinnerIdentifier
+        activityView.accessibilityIdentifier = AccessibilityIdentifier.loadingSpinnerIdentifier
         activityView.isAccessibilityElement = true
         activityView.startAnimating()
         self.view.addSubview(activityView)
-
     }
     
     func fetchAstronautDetails() {
