@@ -10,8 +10,11 @@ import Foundation
 struct TestStringConstants {
     static let astronautListMockFileName = "AstronautList"
     static let astronautDetailsMockFileName = "AstronautDetails"
+    static let unknownFileName = "UnknownFile"
     static let mockAstronautListCount = 10
     static let mockAstronautId = 710
+    static let mockUnknownAstronautId = 999
+    static let nilCount = 0
     static let mockAstronautName = "Luke Delaney"
     static let mockAstronautNationality = "American"
     static let mockAstronautDateofBirth = "1979-01-01"

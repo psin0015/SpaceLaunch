@@ -13,7 +13,7 @@ final class AstronautViewModelTests: XCTestCase {
     func testAstronautListViewModel() {
         let astronautListViewModel = AstronautListDefaultViewModel(networkService: MockNetworkService())
         astronautListViewModel.fetchAstronauts()
-        XCTAssertGreaterThan(astronautListViewModel.astronauts.count, 0)
+        XCTAssertGreaterThan(astronautListViewModel.astronauts.count, TestStringConstants.nilCount)
     }
     
     func testAstronautDetailViewModel() {
@@ -24,7 +24,7 @@ final class AstronautViewModelTests: XCTestCase {
     
     func testAstronautDetailViewModelFailure() {
         let astronautListViewModel = AstronautDetailsDefaultViewModel(networkService: MockNetworkService())
-        astronautListViewModel.fetchAstronautDetail(astronautId: 00)
+        astronautListViewModel.fetchAstronautDetail(astronautId: TestStringConstants.mockUnknownAstronautId)
         XCTAssertNil(astronautListViewModel.astronautDetail)
     }
     

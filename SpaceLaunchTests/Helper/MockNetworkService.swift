@@ -14,12 +14,20 @@ final class MockNetworkService: NetworkService {
         var mockFileName = ""
         if request.url.contains("\(TestStringConstants.mockAstronautId)") {
             mockFileName = TestStringConstants.astronautDetailsMockFileName
+        } else if request.url.contains("\(TestStringConstants.mockUnknownAstronautId)")   {
+            mockFileName = TestStringConstants.unknownFileName
         } else {
             mockFileName = TestStringConstants.astronautListMockFileName
         }
         
         if let data = AstronautDataGenerator.getAstronautData(fileName: mockFileName) {
             try? completion(.success(request.decode(data)))
+        } else {
+            completion(.failure(NSError(
+                domain: ErrorResponse.invalidEndpoint.rawValue,
+                code: 404,
+                userInfo: nil
+            )))
         }
     }
 }

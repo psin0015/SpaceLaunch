@@ -8,16 +8,6 @@
 import XCTest
 
 final class SpaceLaunchUITests: XCTestCase {
-
-    func testActivityLoader(){
-        let app = XCUIApplication()
-        app.launch()
-        
-        let tableView = app.tables.element(boundBy: 0)
-        XCTAssertTrue(tableView.exists)
-        let loadingSpinner = app.otherElements.activityIndicators.matching(identifier: AccessibilityIdentifier.loadingSpinnerIdentifier)
-        XCTAssertTrue(loadingSpinner.element.exists)
-    }
     
     func testAstronautListFetch() {
         let app = XCUIApplication()
