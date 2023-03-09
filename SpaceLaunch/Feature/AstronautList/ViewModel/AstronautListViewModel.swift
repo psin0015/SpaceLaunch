@@ -20,15 +20,14 @@ final class AstronautListDefaultViewModel: AstronautListViewModel {
     
     private let networkService: NetworkService
     private var astronautListSorted = false
-    
-    init(networkService: NetworkService) {
-        self.networkService = networkService
-    }
-    
     var astronauts: [Astronaut] = []
     var onFetchAstronautsSucceed: (() -> Void)?
     var onAstronautListSort: (() -> Void)?
     var onFetchAstronautsFailure: ((Error) -> Void)?
+    
+    init(networkService: NetworkService) {
+        self.networkService = networkService
+    }
     
     func fetchAstronauts() {
         let request = AstronautListRequest()

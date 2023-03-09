@@ -17,14 +17,13 @@ protocol AstronautDetailsViewModel: AnyObject {
 final class AstronautDetailsDefaultViewModel: AstronautDetailsViewModel {
     
     private let networkService: NetworkService
+    var astronautDetail: AstronautDetails?
+    var onFetchAstronautDetailsSucceed: (() -> Void)?
+    var onFetchAstronautDetailsFailure: ((Error) -> Void)?
     
     init(networkService: NetworkService) {
         self.networkService = networkService
     }
-    
-    var astronautDetail: AstronautDetails?
-    var onFetchAstronautDetailsSucceed: (() -> Void)?
-    var onFetchAstronautDetailsFailure: ((Error) -> Void)?
     
     func fetchAstronautDetail(astronautId: Int) {
         let request = AstronautDetailsRequest(astronautId: astronautId)
@@ -39,4 +38,3 @@ final class AstronautDetailsDefaultViewModel: AstronautDetailsViewModel {
         }
     }
 }
-

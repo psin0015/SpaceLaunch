@@ -27,6 +27,7 @@ class AstronautListViewController: UIViewController {
         astronautListTableView.register(UINib.init(nibName: "AstronautListCell", bundle: nil), forCellReuseIdentifier: AstronautListCell.reuseIdentifier)
         navigationItem.title = StringConstants.astronautListTitle
         
+        //Add astronaut list sort button and disable it until the list is downloaded
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action:  #selector(sortAstronautNames))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.accessibilityLabel = AccessibilityLabels.sortButton

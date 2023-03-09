@@ -13,4 +13,3 @@ struct AccessibilityLabels {
     static let loadingAstronautDetails = "Loading astronaut details"
     static let astronautImage = "A photograph of"
 }
-

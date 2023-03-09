@@ -24,6 +24,7 @@
 		DBD87AC929B9954F00AE1B39 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC829B9954F00AE1B39 /* MockNetworkService.swift */; };
 		DBD87ACB29B9962700AE1B39 /* MockDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87ACA29B9962700AE1B39 /* MockDataGenerator.swift */; };
 		DBD87ACF29B9AA4700AE1B39 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC429B98ABA00AE1B39 /* AccessibilityIdentifier.swift */; };
+		DBD87AD229B9DF5D00AE1B39 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */; };
 		DBED890729B8850A00FA6584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890629B8850A00FA6584 /* AppDelegate.swift */; };
 		DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890829B8850A00FA6584 /* SceneDelegate.swift */; };
 		DBED891029B8850B00FA6584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBED890F29B8850B00FA6584 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		DBD87AC629B98D4000AE1B39 /* AstronautViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautViewModelTests.swift; sourceTree = "<group>"; };
 		DBD87AC829B9954F00AE1B39 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		DBD87ACA29B9962700AE1B39 /* MockDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataGenerator.swift; sourceTree = "<group>"; };
+		DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DBED890329B8850A00FA6584 /* SpaceLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED890629B8850A00FA6584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBED890829B8850A00FA6584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		DBD87AD029B9DF5000AE1B39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBD87AD129B9DF5D00AE1B39 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DBED88FA29B8850A00FA6584 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 		DBED890529B8850A00FA6584 /* SpaceLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				DBD87AD029B9DF5000AE1B39 /* Extensions */,
 				DBED895329B8928500FA6584 /* Helpers */,
 				DBED893629B8865000FA6584 /* AppDelegate */,
 				DBED893929B88A3600FA6584 /* Feature */,
@@ -498,6 +509,7 @@
 				DBD87AB729B8E34900AE1B39 /* Metrics.swift in Sources */,
 				DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */,
 				DBED894F29B88D1B00FA6584 /* AstronautDetails.swift in Sources */,
+				DBD87AD229B9DF5D00AE1B39 /* UIColor+Extension.swift in Sources */,
 				DBED894429B88AE600FA6584 /* AstronautListCell.swift in Sources */,
 				DBED895729B893D900FA6584 /* AstronautListViewModel.swift in Sources */,
 				DBED895A29B893F200FA6584 /* AstronautDetailsViewModel.swift in Sources */,
