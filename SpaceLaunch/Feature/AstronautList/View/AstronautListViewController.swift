@@ -31,6 +31,7 @@ class AstronautListViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action:  #selector(sortAstronautNames))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItem?.accessibilityLabel = AccessibilityLabels.sortButton
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = AccessibilityIdentifier.sortButton
         navigationItem.rightBarButtonItem?.isEnabled = false
         
         //Setup the loading activity indicator
@@ -62,7 +63,8 @@ class AstronautListViewController: UIViewController {
         
         viewModel.onFetchAstronautsFailure = { [weak self] error in
             DispatchQueue.main.async {
-                self?.showErrorAlert()
+                self?.showAlert(alertMessage: StringConstants.errorMessageAstronautList)
+                self?.activityView.stopAnimating()
             }
         }
         
@@ -71,16 +73,6 @@ class AstronautListViewController: UIViewController {
                 self?.astronautListTableView.reloadData()
             }
         }
-    }
-    
-    func showErrorAlert() {
-        let alert = UIAlertController(title: StringConstants.errorMessageTitle, message: StringConstants.errorMessageAstronautList, preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: StringConstants.errorMessageAction, style: UIAlertAction.Style.default, handler: { [weak self] _ in
-            self?.activityView.stopAnimating()
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func sortAstronautNames() {
@@ -114,8 +106,8 @@ extension AstronautListViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let astronautDetailsViewStoryboard = UIStoryboard(name: "AstronautDetailsViewController", bundle: nil)
-        if let astronautDetailsViewController = astronautDetailsViewStoryboard.instantiateViewController(withIdentifier: "AstronautDetailsViewController") as? AstronautDetailsViewController {
+        let astronautDetailsViewStoryboard = UIStoryboard(name: StringConstants.astronautDetailsViewController, bundle: nil)
+        if let astronautDetailsViewController = astronautDetailsViewStoryboard.instantiateViewController(withIdentifier: StringConstants.astronautDetailsViewController) as? AstronautDetailsViewController {
             astronautDetailsViewController.astronautId = viewModel.astronauts[indexPath.row].id
             self.navigationController?.pushViewController(astronautDetailsViewController, animated: true)
         }        

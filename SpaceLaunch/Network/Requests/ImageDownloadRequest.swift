@@ -16,13 +16,7 @@ struct ImageDownloadRequest: DataRequest {
     }
     
     func decode(_ data: Data) throws -> UIImage {
-        guard let image = UIImage(data: data) else {
-            throw NSError(
-                domain: ErrorResponse.invalidResponse.rawValue,
-                code: 13,
-                userInfo: nil
-            )
-        }
+        guard let image = UIImage(data: data) else { throw NSError(domain: ErrorResponse.invalidResponse.rawValue, code: 13) }
         return image
     }
 }

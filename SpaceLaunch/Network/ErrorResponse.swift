@@ -8,13 +8,6 @@
 import Foundation
 
 enum ErrorResponse: String {
-    case invalidEndpoint
-    case invalidResponse
-    
-    public var description: String {
-        switch self {
-        case .invalidEndpoint: return "API URL incorrect"
-        case .invalidResponse: return "API Response invalid"
-        }
-    }
+    case invalidEndpoint = "API URL incorrect"
+    case invalidResponse = "API Response invalid"
 }

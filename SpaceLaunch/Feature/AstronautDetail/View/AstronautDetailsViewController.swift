@@ -53,18 +53,10 @@ class AstronautDetailsViewController: UIViewController {
         
         viewModel.onFetchAstronautDetailsFailure = { [weak self] error in
             DispatchQueue.main.async {
-                self?.showErrorAlert()
+                self?.showAlert(alertMessage: StringConstants.errorMessageAstronautDetails)
+                self?.activityView.stopAnimating()
             }
         }
-    }
-    
-    func showErrorAlert() {
-        let alert = UIAlertController(title: StringConstants.errorMessageTitle, message: StringConstants.errorMessageAstronautDetails, preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: StringConstants.errorMessageAction, style: UIAlertAction.Style.default, handler: { [weak self] _ in
-            self?.activityView.stopAnimating()
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
     
     func setAstronautDetails() {

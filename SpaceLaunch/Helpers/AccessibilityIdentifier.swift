@@ -12,4 +12,5 @@ struct AccessibilityIdentifier {
     static let alertIdentifier = "alertDialog"
     static let astronautCellIdentifier = "astronautCell"
     static let astronautDetailImageView = "astronautDetailImage"
+    static let sortButton = "sortButton"
 }

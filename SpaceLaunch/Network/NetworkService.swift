@@ -16,12 +16,7 @@ final class DefaultNetworkService: NetworkService {
     func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) {
         
         guard var urlComponent = URLComponents(string: request.url) else {
-            let error = NSError(
-                domain: ErrorResponse.invalidEndpoint.rawValue,
-                code: 404,
-                userInfo: nil
-            )
-            
+            let error = NSError(domain: ErrorResponse.invalidEndpoint.rawValue, code: 404)
             return completion(.failure(error))
         }
         
@@ -36,12 +31,7 @@ final class DefaultNetworkService: NetworkService {
         urlComponent.queryItems = queryItems
         
         guard let url = urlComponent.url else {
-            let error = NSError(
-                domain: ErrorResponse.invalidEndpoint.rawValue,
-                code: 404,
-                userInfo: nil
-            )
-            
+            let error = NSError(domain: ErrorResponse.invalidEndpoint.rawValue, code: 404)
             return completion(.failure(error))
         }
         
