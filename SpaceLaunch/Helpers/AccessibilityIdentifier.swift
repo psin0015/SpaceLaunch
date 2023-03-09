@@ -7,7 +7,9 @@
 
 import Foundation
 
-final class AccessibilityIdentifier {
+struct AccessibilityIdentifier {
     static let loadingSpinnerIdentifier = "loadingSpinner"
     static let alertIdentifier = "alertDialog"
+    static let astronautCellIdentifier = "astronautCell"
+    static let astronautDetailImageView = "astronautDetailImage"
 }

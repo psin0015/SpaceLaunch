@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Metrics {
+struct Metrics {
     static let activityIndicatorHeight: CGFloat = 50
     static let activityIndicatorWidth: CGFloat = 50
 }

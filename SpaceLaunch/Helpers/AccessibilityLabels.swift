@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AccessibilityLabels {    
+struct AccessibilityLabels {    
     static let sortButton = "Astronaut names sort"
     static let loadingAstronautList = "Loading astronaut list"
     static let loadingAstronautDetails = "Loading astronaut details"

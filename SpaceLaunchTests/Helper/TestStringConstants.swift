@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TestStringConstants {
+struct TestStringConstants {
     static let astronautListMockFileName = "AstronautList"
     static let astronautDetailsMockFileName = "AstronautDetails"
     static let mockAstronautListCount = 10
@@ -15,4 +15,6 @@ final class TestStringConstants {
     static let mockAstronautName = "Luke Delaney"
     static let mockAstronautNationality = "American"
     static let mockAstronautDateofBirth = "1979-01-01"
+    static let decendingAstronautNameList = ["Wang Yaping", "Vladimir Vasyutin", "Viktor Patsayev", "Scott Kelly", "Samantha Cristoforetti", "Robert S. Kimbrough", "Luke Delaney", "John Young", "Daniel C. Burbank", "Chen Dong"]
+    static let ascendingAstronautNameList = ["Chen Dong", "Daniel C. Burbank", "John Young", "Luke Delaney", "Robert S. Kimbrough", "Samantha Cristoforetti", "Scott Kelly", "Viktor Patsayev", "Vladimir Vasyutin", "Wang Yaping"]
 }

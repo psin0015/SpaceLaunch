@@ -12,7 +12,7 @@
 		DBD87AB129B8C00400AE1B39 /* AstronautDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */; };
 		DBD87AB329B8D98900AE1B39 /* AccessibilityLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */; };
 		DBD87AB529B8DA8F00AE1B39 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */; };
-		DBD87AB729B8E34900AE1B39 /* Meterics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB629B8E34900AE1B39 /* Meterics.swift */; };
+		DBD87AB729B8E34900AE1B39 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AB629B8E34900AE1B39 /* Metrics.swift */; };
 		DBD87ABB29B95B4800AE1B39 /* AstronautDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD87AB929B95B4800AE1B39 /* AstronautDetails.json */; };
 		DBD87ABC29B95B4800AE1B39 /* AstronautList.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD87ABA29B95B4800AE1B39 /* AstronautList.json */; };
 		DBD87ABE29B95BB200AE1B39 /* AstronautMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87ABD29B95BB200AE1B39 /* AstronautMockTests.swift */; };
@@ -23,12 +23,12 @@
 		DBD87AC729B98D4000AE1B39 /* AstronautViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC629B98D4000AE1B39 /* AstronautViewModelTests.swift */; };
 		DBD87AC929B9954F00AE1B39 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC829B9954F00AE1B39 /* MockNetworkService.swift */; };
 		DBD87ACB29B9962700AE1B39 /* MockDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87ACA29B9962700AE1B39 /* MockDataGenerator.swift */; };
+		DBD87ACF29B9AA4700AE1B39 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD87AC429B98ABA00AE1B39 /* AccessibilityIdentifier.swift */; };
 		DBED890729B8850A00FA6584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890629B8850A00FA6584 /* AppDelegate.swift */; };
 		DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED890829B8850A00FA6584 /* SceneDelegate.swift */; };
 		DBED891029B8850B00FA6584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBED890F29B8850B00FA6584 /* Assets.xcassets */; };
 		DBED891329B8850B00FA6584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBED891129B8850B00FA6584 /* LaunchScreen.storyboard */; };
 		DBED892829B8850B00FA6584 /* SpaceLaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED892729B8850B00FA6584 /* SpaceLaunchUITests.swift */; };
-		DBED892A29B8850B00FA6584 /* SpaceLaunchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED892929B8850B00FA6584 /* SpaceLaunchUITestsLaunchTests.swift */; };
 		DBED894429B88AE600FA6584 /* AstronautListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED894229B88AE600FA6584 /* AstronautListCell.swift */; };
 		DBED894529B88AE600FA6584 /* AstronautListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBED894329B88AE600FA6584 /* AstronautListCell.xib */; };
 		DBED894829B88B5200FA6584 /* AstronautListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED894629B88B5200FA6584 /* AstronautListViewController.swift */; };
@@ -70,7 +70,7 @@
 		DBD87AB029B8C00400AE1B39 /* AstronautDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsRequest.swift; sourceTree = "<group>"; };
 		DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityLabels.swift; sourceTree = "<group>"; };
 		DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
-		DBD87AB629B8E34900AE1B39 /* Meterics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meterics.swift; sourceTree = "<group>"; };
+		DBD87AB629B8E34900AE1B39 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		DBD87AB929B95B4800AE1B39 /* AstronautDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AstronautDetails.json; sourceTree = "<group>"; };
 		DBD87ABA29B95B4800AE1B39 /* AstronautList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AstronautList.json; sourceTree = "<group>"; };
 		DBD87ABD29B95BB200AE1B39 /* AstronautMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautMockTests.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		DBED891929B8850B00FA6584 /* SpaceLaunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceLaunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED892329B8850B00FA6584 /* SpaceLaunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceLaunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBED892729B8850B00FA6584 /* SpaceLaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceLaunchUITests.swift; sourceTree = "<group>"; };
-		DBED892929B8850B00FA6584 /* SpaceLaunchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceLaunchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DBED894229B88AE600FA6584 /* AstronautListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautListCell.swift; sourceTree = "<group>"; };
 		DBED894329B88AE600FA6584 /* AstronautListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AstronautListCell.xib; sourceTree = "<group>"; };
 		DBED894629B88B5200FA6584 /* AstronautListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautListViewController.swift; sourceTree = "<group>"; };
@@ -198,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				DBED892729B8850B00FA6584 /* SpaceLaunchUITests.swift */,
-				DBED892929B8850B00FA6584 /* SpaceLaunchUITestsLaunchTests.swift */,
 			);
 			path = SpaceLaunchUITests;
 			sourceTree = "<group>";
@@ -330,7 +328,7 @@
 				DBED895429B892B900FA6584 /* Helpers.swift */,
 				DBD87AB229B8D98900AE1B39 /* AccessibilityLabels.swift */,
 				DBD87AB429B8DA8F00AE1B39 /* StringConstants.swift */,
-				DBD87AB629B8E34900AE1B39 /* Meterics.swift */,
+				DBD87AB629B8E34900AE1B39 /* Metrics.swift */,
 				DBD87AC429B98ABA00AE1B39 /* AccessibilityIdentifier.swift */,
 			);
 			path = Helpers;
@@ -497,7 +495,7 @@
 				DBED896229B89F2100FA6584 /* ImageDownloadClient.swift in Sources */,
 				DBD87AAF29B8B67800AE1B39 /* ImageDownloadRequest.swift in Sources */,
 				DBED895129B88D2100FA6584 /* Astronaut.swift in Sources */,
-				DBD87AB729B8E34900AE1B39 /* Meterics.swift in Sources */,
+				DBD87AB729B8E34900AE1B39 /* Metrics.swift in Sources */,
 				DBED890929B8850A00FA6584 /* SceneDelegate.swift in Sources */,
 				DBED894F29B88D1B00FA6584 /* AstronautDetails.swift in Sources */,
 				DBED894429B88AE600FA6584 /* AstronautListCell.swift in Sources */,
@@ -524,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBED892A29B8850B00FA6584 /* SpaceLaunchUITestsLaunchTests.swift in Sources */,
+				DBD87ACF29B9AA4700AE1B39 /* AccessibilityIdentifier.swift in Sources */,
 				DBED892829B8850B00FA6584 /* SpaceLaunchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

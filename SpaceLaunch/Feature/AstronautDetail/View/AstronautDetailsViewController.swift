@@ -74,6 +74,7 @@ class AstronautDetailsViewController: UIViewController {
             astronautDateOfBirth.text = astronautDetail.dateOfBirth
             astronautBio.text = astronautDetail.bio
             astronautDetailImageView.isAccessibilityElement = true
+            astronautDetailImageView.accessibilityIdentifier = AccessibilityIdentifier.astronautDetailImageView
             astronautDetailImageView.accessibilityLabel = "\(AccessibilityLabels.astronautImage) \(astronautDetail.name)"
             ImageDownloadClient.shared.setImage(from: astronautDetail.profileImage, placeholderImage: nil) { [weak self] image in
                 self?.astronautDetailImageView.image = image

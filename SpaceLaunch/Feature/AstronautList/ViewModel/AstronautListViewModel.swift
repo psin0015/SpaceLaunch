@@ -10,13 +10,16 @@ import Foundation
 protocol AstronautListViewModel: AnyObject {
     var astronauts: [Astronaut] { set get }
     var onFetchAstronautsSucceed: (() -> Void)? { set get }
+    var onAstronautListSort: (() -> Void)? { set get }
     var onFetchAstronautsFailure: ((Error) -> Void)? { set get }
     func fetchAstronauts()
+    func sortAstronautNames()
 }
 
 final class AstronautListDefaultViewModel: AstronautListViewModel {
     
     private let networkService: NetworkService
+    private var astronautListSorted = false
     
     init(networkService: NetworkService) {
         self.networkService = networkService
@@ -24,6 +27,7 @@ final class AstronautListDefaultViewModel: AstronautListViewModel {
     
     var astronauts: [Astronaut] = []
     var onFetchAstronautsSucceed: (() -> Void)?
+    var onAstronautListSort: (() -> Void)?
     var onFetchAstronautsFailure: ((Error) -> Void)?
     
     func fetchAstronauts() {
@@ -37,5 +41,15 @@ final class AstronautListDefaultViewModel: AstronautListViewModel {
                 self?.onFetchAstronautsFailure?(error)
             }
         }
+    }
+    
+    func sortAstronautNames() {
+        if (astronautListSorted) {
+            self.astronauts.reverse()
+        } else {
+            self.astronauts.sort { $0.name > $1.name }
+            astronautListSorted = true
+        }
+        self.onAstronautListSort?()
     }
 }

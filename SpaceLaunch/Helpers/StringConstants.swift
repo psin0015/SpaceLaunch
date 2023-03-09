@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class StringConstants {
+struct StringConstants {
     static let astronautListTitle = "Astronaut List"
     static let astronautDetailsTitle = "Astronaut Details"
     static let errorMessageAstronautList = "There seems to be a problem in fetching the astronaut list. Please try again after some time."

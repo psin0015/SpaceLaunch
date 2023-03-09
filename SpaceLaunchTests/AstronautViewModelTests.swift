@@ -20,7 +20,6 @@ final class AstronautViewModelTests: XCTestCase {
         let astronautListViewModel = AstronautDetailsDefaultViewModel(networkService: MockNetworkService())
         astronautListViewModel.fetchAstronautDetail(astronautId: TestStringConstants.mockAstronautId)
         XCTAssertNotNil(astronautListViewModel.astronautDetail)
-        
     }
     
     func testAstronautDetailViewModelFailure() {
@@ -29,5 +28,12 @@ final class AstronautViewModelTests: XCTestCase {
         XCTAssertNil(astronautListViewModel.astronautDetail)
     }
     
+    func testSortAstronautNames() {
+        let astronautListViewModel = AstronautListDefaultViewModel(networkService: MockNetworkService())
+        astronautListViewModel.fetchAstronauts()
+        astronautListViewModel.sortAstronautNames()
+        XCTAssertEqual(astronautListViewModel.astronauts.map(\.name), TestStringConstants.decendingAstronautNameList)
+        astronautListViewModel.sortAstronautNames()
+        XCTAssertEqual(astronautListViewModel.astronauts.map(\.name), TestStringConstants.ascendingAstronautNameList)
+    }
 }
-

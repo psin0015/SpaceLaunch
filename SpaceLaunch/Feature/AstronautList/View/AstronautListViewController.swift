@@ -12,7 +12,7 @@ class AstronautListViewController: UIViewController {
     @IBOutlet weak var astronautListTableView: UITableView!
     let activityView = UIActivityIndicatorView(style: .large)
     private let viewModel: AstronautListViewModel = AstronautListDefaultViewModel(networkService: DefaultNetworkService())
-    private var astronautListSorted = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -64,6 +64,12 @@ class AstronautListViewController: UIViewController {
                 self?.showErrorAlert()
             }
         }
+        
+        viewModel.onAstronautListSort = { [weak self] in
+            DispatchQueue.main.async {
+                self?.astronautListTableView.reloadData()
+            }
+        }
     }
     
     func showErrorAlert() {
@@ -77,13 +83,7 @@ class AstronautListViewController: UIViewController {
     }
     
     @objc func sortAstronautNames() {
-        if (astronautListSorted) {
-            viewModel.astronauts.reverse()
-        } else {
-            viewModel.astronauts.sort { $0.name > $1.name }
-            astronautListSorted = true
-        }
-        astronautListTableView.reloadData()
+        viewModel.sortAstronautNames()
     }
 }
 
@@ -95,7 +95,7 @@ extension AstronautListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let astronautCell = tableView.dequeueReusableCell(withIdentifier: AstronautListCell.reuseIdentifier, for: indexPath) as! AstronautListCell
-        
+        astronautCell.accessibilityIdentifier = AccessibilityIdentifier.astronautCellIdentifier
         let astronaut = viewModel.astronauts[indexPath.row]
         
         astronautCell.bindViewWith(
